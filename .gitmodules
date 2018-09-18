@@ -2,3 +2,8 @@
 	path = ntsystemwork/Odoo-FE-v11
 	url = git@github.com:ntsystemwork/Odoo-FE-v11.git
 	branch = master
+
+[submodule "ntsystemwork/NTSW"]
+	path = ntsystemwork/NTSW
+	url = git@github.com:ntsystemwork/NTSW.git
+	branch = master
