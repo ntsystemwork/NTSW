@@ -7,7 +7,6 @@
     'license': 'AGPL-3',
     'summary': '',
     'depends': [
-        # this dependency is becaouse of CUIT request and some config menus
         'l10n_ar_partner',
     ],
     'external_dependencies': {
