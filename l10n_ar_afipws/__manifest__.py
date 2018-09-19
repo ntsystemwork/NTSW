@@ -25,8 +25,7 @@
         'demo/certificate_demo.xml',
         'demo/parameter_demo.xml',
     ],
-    'images': [
-    ],
+    'images': [],
     'installable': True,
     'auto_install': False,
     'application': False,
