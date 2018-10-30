@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_account_debt_line_search" model="ir.ui.view">
-         <field name="name">account.debt.line.search</field>
-         <field name="model">account.debt.line</field>
-         <field name="arch" type="xml">
-            <search string="Debt Lines">
-                <field name="document_number"/>
-                <field name="date"/>
-                <field name="date_maturity"/>
-                <field name="partner_id"/>
-                <field name="document_type_id"/>
-                <field name="company_id" groups="base.group_multi_company"/>
-                <filter string="Receivable" domain="[('internal_type','=','receivable')]" help="Receivable payments"/>
-                <filter string="Payable" domain="[('internal_type','=','payable')]" help="Payable payments"/>
-                <separator/>
-                <filter string="Unreconciled" domain="[('reconciled','=',False), ('account_id.reconcile','=',True)]" help="Unreconciled Journal Items" name="unreconciled"/>
-                <group expand="0" string="Group By...">
-                    <filter string="Type" context="{'group_by': 'internal_type'}"/>
-                    <filter string="Date" context="{'group_by': 'date'}"/>
-                    <filter string="Partner" context="{'group_by': 'partner_id'}"/>
-                    <filter string="Document Type" context="{'group_by': 'document_type_id'}"/>
-                    <filter string="Account" context="{'group_by': 'account_id'}"/>
-                    <filter string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
-                    <filter string="Date Maturity" context="{'group_by': 'date_maturity'}"/>
-               </group>
-            </search>
-         </field>
-    </record>
+    <!--<record id="view_account_debt_line_search" model="ir.ui.view">-->
+         <!--<field name="name">account.debt.line.search</field>-->
+         <!--<field name="model">account.debt.line</field>-->
+         <!--<field name="arch" type="xml">-->
+            <!--<search string="Debt Lines">-->
+                <!--<field name="document_number"/>-->
+                <!--<field name="date"/>-->
+                <!--<field name="date_maturity"/>-->
+                <!--<field name="partner_id"/>-->
+                <!--<field name="document_type_id"/>-->
+                <!--<field name="company_id" groups="base.group_multi_company"/>-->
+                <!--<filter string="Receivable" domain="[('internal_type','=','receivable')]" help="Receivable payments"/>-->
+                <!--<filter string="Payable" domain="[('internal_type','=','payable')]" help="Payable payments"/>-->
+                <!--<separator/>-->
+                <!--<filter string="Unreconciled" domain="[('reconciled','=',False), ('account_id.reconcile','=',True)]" help="Unreconciled Journal Items" name="unreconciled"/>-->
+                <!--<group expand="0" string="Group By...">-->
+                    <!--<filter string="Type" context="{'group_by': 'internal_type'}"/>-->
+                    <!--<filter string="Date" context="{'group_by': 'date'}"/>-->
+                    <!--<filter string="Partner" context="{'group_by': 'partner_id'}"/>-->
+                    <!--<filter string="Document Type" context="{'group_by': 'document_type_id'}"/>-->
+                    <!--<filter string="Account" context="{'group_by': 'account_id'}"/>-->
+                    <!--<filter string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>-->
+                    <!--<filter string="Date Maturity" context="{'group_by': 'date_maturity'}"/>-->
+               <!--</group>-->
+            <!--</search>-->
+         <!--</field>-->
+    <!--</record>-->
 
     <record id="view_account_debt_line_tree" model="ir.ui.view">
          <field name="name">account.debt.line.tree</field>

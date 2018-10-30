@@ -45,25 +45,25 @@
         Sales > Configuration > Address Book > Localization > Import NUTS 2013</field>
 </record>
 
-<record model="ir.ui.view" id="view_res_partner_nuts_filter">
-    <field name="name">NUTS search filters</field>
-    <field name="model">res.partner.nuts</field>
-    <field name="arch" type="xml">
-        <search string="Search NUTS">
-            <field name="name"/>
-            <field name="country_id"/>
-            <field name="state_id"/>
-            <group expand="0" string="Group By">
-                <filter string="Country"
-                        domain="[]"
-                        context="{'group_by': 'country_id'}"/>
-                <filter string="Level"
-                        domain="[]"
-                        context="{'group_by': 'level'}"/>
-            </group>
-        </search>
-    </field>
-</record>
+<!--<record model="ir.ui.view" id="view_res_partner_nuts_filter">-->
+    <!--<field name="name">NUTS search filters</field>-->
+    <!--<field name="model">res.partner.nuts</field>-->
+    <!--<field name="arch" type="xml">-->
+        <!--<search string="Search NUTS">-->
+            <!--<field name="name"/>-->
+            <!--<field name="country_id"/>-->
+            <!--<field name="state_id"/>-->
+            <!--<group expand="0" string="Group By">-->
+                <!--<filter string="Country"-->
+                        <!--domain="[]"-->
+                        <!--context="{'group_by': 'country_id'}"/>-->
+                <!--<filter string="Level"-->
+                        <!--domain="[]"-->
+                        <!--context="{'group_by': 'level'}"/>-->
+            <!--</group>-->
+        <!--</search>-->
+    <!--</field>-->
+<!--</record>-->
 
 <menuitem action="res_partner_nuts_action"
           id="res_partner_nuts_menu"
