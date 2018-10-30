@@ -3,7 +3,8 @@ from odoo import models, api, fields
 from odoo.osv import expression
 from odoo.addons.account.models import account_move
 
-old_method = account_move.AccountMoveLine.domain_move_lines_for_reconciliation
+
+# old_method = account_move.AccountMoveLine.domain_move_lines_for_reconciliation
 
 
 class AccountMoveLine(models.Model):
@@ -11,9 +12,9 @@ class AccountMoveLine(models.Model):
     Show and allow to search by move display name (Document number) on
     bank statements and partner debt reconcile
     """
-
+    
     _inherit = 'account.move.line'
-
+    
     # useful to group by this field
     document_type_id = fields.Many2one(
         related='move_id.document_type_id',
@@ -23,7 +24,7 @@ class AccountMoveLine(models.Model):
         store=True,
         index=True,
     )
-
+    
     @api.multi
     def prepare_move_lines_for_reconciliation_widget(
             self, target_currency=False, target_date=False):
@@ -34,11 +35,11 @@ class AccountMoveLine(models.Model):
         for rec in res:
             line = self.browse(rec['id'])
             rec['name'] = (
-                line.name != '/' and
-                line.move_id.display_name + ': ' + line.name or
-                line.move_id.display_name)
+                    line.name != '/' and
+                    line.move_id.display_name + ': ' + line.name or
+                    line.move_id.display_name)
         return res
-
+    
     @api.model
     def domain_move_lines_for_reconciliation(self, excluded_ids=None,
                                              str=False):
